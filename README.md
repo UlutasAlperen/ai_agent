@@ -20,3 +20,13 @@ source .venv/bin/active
 uv add google-genai==1.12.1
 uv add python-dotenv==1.12.1
 ```
+
+### To run the project using the uv virtual environment, you use
+```bash
+uv run main.py
+```
+
+
+
+
+
