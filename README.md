@@ -1,11 +1,12 @@
-# AI Assistant
+# AI Code Assistant
 
-AI Assistant is a command-line tool that uses Google's Gemini model to help you get answers explanations or run simple tasks interactively. It works like a mini AI agent that can perform actions check results and keep the conversation going.
+AI Code Assistant is a simple command-line tool that uses Google's Gemini model to help you understand modify and debug code. It works like a mini AI agent iteratively inspecting files reading contents, running code and writing updates based on your prompts.
 
 ## Features
-- Ask questions and get detailed answers.
-- Can run pre-defined functions or tasks automatically.
-- Iterative: keeps using its tools until the task is complete.
+
+- Understands your code and suggests fixes or improvements.
+- Can list files, read file content, write files, and run Python scripts.
+- Iterative: keeps using its tools until the task is done.
 - Optional verbose mode to see each step it takes.
 
 ### Installation
