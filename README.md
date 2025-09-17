@@ -1,32 +1,62 @@
-### how to create uv project
-```bash
-uv init your-project-name
-cd your-project-name
-```
+# AI Assistant
 
+AI Assistant is a command-line tool that uses Google's Gemini model to help you get answers explanations or run simple tasks interactively. It works like a mini AI agent that can perform actions check results and keep the conversation going.
+
+## Features
+- Ask questions and get detailed answers.
+- Can run pre-defined functions or tasks automatically.
+- Iterative: keeps using its tools until the task is complete.
+- Optional verbose mode to see each step it takes.
+
+### Installation
+
+1. **Clone this repository**
+```bash
+git clone https://github.com/your-username/ai-agent.git
+cd ai-agent
+```
 ### create a virtual environment at the top level of your project directory
 ```bash
-uv venv
-```
-
-### create a virtual environment
-```bash
+python -m venv .venv
 source .venv/bin/active
 ```
+### Install dependencies
 
-
-### use uv to add two dependecies to the project they will be added to the file pyproject.toml
 ```bash
-uv add google-genai==1.12.1
-uv add python-dotenv==1.12.1
+pip install -r requirements.txt
 ```
+>google-genai==1.12.1
+>python-dotenv==1.12.1
 
-### To run the project using the uv virtual environment, you use
+### create Gemini API key
+
+https://ai.google.dev/gemini-api/docs/api-key
+
+### Add your Gemini API key in a .env file
+```
+GEMINI_API_KEY=your_api_key_here
+```
+## Usage
+
+### Run the assistant with a prompt
+
 ```bash
-uv run main.py
+python3 main.py "Fix the bug in the calculator" --verbose
 ```
+- The --verbose flag shows each function call and its result.
+- The assistant will iteratively analyze your project, use the available tools, and finally provide a solution or explanation.
 
-
-
-
-
+### Example:
+```bash
+python main.py "Explain how the calculator prints results"
+```
+#### Output: 
+```sql
+ - Calling function: get_files_info
+ - Calling function: get_file_content
+Final response:
+The calculator prints results using `print()`, formatting them with `format_json_output`...
+```
+# Notes
+- Tools are defined in call_function.py (get_files_info, get_file_content, run_python_file, write_file).
+- System prompts and configuration are in prompts.py.
