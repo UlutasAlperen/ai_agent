@@ -47,12 +47,20 @@ GEMINI_API_KEY=your_api_key_here
 ```bash
 python3 main.py "Fix the bug in the calculator" --verbose
 ```
+>**or:**
+```bash
+uv run main.py "Fix the bug in the calculator" --verbose
+```
 - The --verbose flag shows each function call and its result.
 - The assistant will iteratively analyze your project, use the available tools, and finally provide a solution or explanation.
 
 ### Example:
 ```bash
 python main.py "Explain how the calculator prints results"
+```
+>**or:**
+```bash
+uv run main.py "Explain how the calculator prints results"
 ```
 #### Output: 
 ```sql
