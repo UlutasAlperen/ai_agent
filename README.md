@@ -13,7 +13,7 @@ AI Code Assistant is a simple command-line tool that uses Google's Gemini model 
 
 1. **Clone this repository**
 ```bash
-git clone https://github.com/your-username/ai-agent.git
+git clone https://github.com/UlutasAlperen/ai_agent
 cd ai-agent
 ```
 ### create a virtual environment at the top level of your project directory
