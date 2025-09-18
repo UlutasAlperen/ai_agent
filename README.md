@@ -26,8 +26,11 @@ source .venv/bin/active
 ```bash
 pip install -r requirements.txt
 ```
->google-genai==1.12.1
->python-dotenv==1.12.1
+- google-genai==1.12.1
+
+- python-dotenv==1.12.1
+
+- requires-python = ">=3.13"
 
 ### create Gemini API key
 
